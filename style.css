@@ -35,6 +35,9 @@ body {
     color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -968,6 +971,7 @@ body {
     color: var(--gray-light);
     padding: 4rem 0 1rem;
     border-top: 3px solid var(--primary);
+    margin-top: auto;
 }
 
 .footer-content {
