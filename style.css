@@ -27,6 +27,7 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -969,9 +970,11 @@ body {
 .footer {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     color: var(--gray-light);
-    padding: 4rem 0 1rem;
+    padding: 4rem 0 2rem;
     border-top: 3px solid var(--primary);
     margin-top: auto;
+    width: 100%;
+    z-index: 100;
 }
 
 .footer-content {
