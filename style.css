@@ -964,9 +964,10 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--gray-dark);
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     color: var(--gray-light);
-    padding: 3rem 0 1rem;
+    padding: 4rem 0 1rem;
+    border-top: 3px solid var(--primary);
 }
 
 .footer-content {
