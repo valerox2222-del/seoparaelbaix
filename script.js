@@ -22,7 +22,7 @@ const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
-    
+
     question.addEventListener('click', () => {
         // Close all other items
         faqItems.forEach(otherItem => {
@@ -30,7 +30,7 @@ faqItems.forEach(item => {
                 otherItem.classList.remove('active');
             }
         });
-        
+
         // Toggle current item
         item.classList.toggle('active');
     });
@@ -41,7 +41,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80; // Account for fixed navbar
             window.scrollTo({
@@ -63,28 +63,40 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form Submission Handler (you can customize this to send to your backend)
+// Form Submission Handler
 const auditForm = document.getElementById('auditForm');
 
 if (auditForm) {
-    auditForm.addEventListener('submit', (e) => {
+    auditForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(auditForm);
-        const data = Object.fromEntries(formData);
-        
-        // Here you would normally send to your backend
-        console.log('Form submitted with data:', data);
-        
-        // Show success message
-        alert('¡Gracias! Tu solicitud ha sido enviada. Recibirás tu auditoría SEO gratuita en 24-48 horas.');
-        
-        // Reset form
-        auditForm.reset();
-        
-        // Optional: Redirect to WhatsApp
-        // window.open('https://wa.me/34640329880?text=Hola, me gustaría solicitar una auditoría SEO gratuita', '_blank');
+
+        const submitButton = auditForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Enviando...';
+        submitButton.disabled = true;
+
+        try {
+            const response = await fetch(auditForm.action, {
+                method: 'POST',
+                body: new FormData(auditForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert('¡Gracias! Tu solicitud ha sido enviada. Recibirás tu auditoría SEO gratuita en 24-48 horas.');
+                auditForm.reset();
+            } else {
+                alert('Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.');
+            }
+        } catch (error) {
+            alert('Hubo un error de conexión. Por favor, inténtalo de nuevo.');
+            console.error('Error:', error);
+        } finally {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
     });
 }
 
@@ -117,7 +129,7 @@ animateOnScroll.forEach(el => {
 const animateCounter = (element, target, duration = 2000) => {
     let current = 0;
     const increment = target / (duration / 16);
-    
+
     const updateCounter = () => {
         current += increment;
         if (current < target) {
@@ -127,7 +139,7 @@ const animateCounter = (element, target, duration = 2000) => {
             element.textContent = target;
         }
     };
-    
+
     updateCounter();
 };
 
@@ -136,18 +148,18 @@ const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.dataset.animated) {
             const statNumbers = entry.target.querySelectorAll('.stat-number');
-            
+
             statNumbers.forEach(stat => {
                 const text = stat.textContent;
                 const number = parseInt(text.replace(/\D/g, ''));
                 const prefix = text.includes('+') ? '+' : '';
                 const suffix = text.includes('%') ? '%' : '';
-                
+
                 stat.textContent = '0';
-                
+
                 let current = 0;
                 const increment = number / 100;
-                
+
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= number) {
@@ -158,7 +170,7 @@ const statsObserver = new IntersectionObserver((entries) => {
                     }
                 }, 20);
             });
-            
+
             entry.target.dataset.animated = 'true';
         }
     });
