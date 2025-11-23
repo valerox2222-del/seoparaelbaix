@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog SEO | SEOParaElBaix - Consejos y Estrategias</title>
+    <meta name="description"
+        content="Blog de SEO con consejos, estrategias y guías prácticas para mejorar el posicionamiento web de tu negocio.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .blog-card p {
+            color: var(--gray-dark);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more:hover {
+            gap: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/34640329880" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-chart-line"></i>
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span>SEO<strong>ParaElBaix</strong></span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#precios">Precios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Blog SEO</h1>
+            <p>Consejos, estrategias y guías para mejorar tu posicionamiento web</p>
+        </div>
+    </section>
+
+    <!-- Blog Articles -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar"></i> 20 Nov 2024</span>
+                            <span><i class="fa-solid fa-clock"></i> 5 min</span>
+                        </div>
+                        <h3>Guía Completa de SEO Local para Negocios en El Baix</h3>
+                        <p>Descubre cómo posicionar tu negocio local en Google Maps y atraer más clientes de tu zona.
+                            Estrategias probadas para aparecer en las búsquedas locales.</p>
+                        <div>
+                            <span class="blog-tag">SEO Local</span>
+                            <span class="blog-tag">Google My Business</span>
+                        </div>
+                        <br><br>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar"></i> 15 Nov 2024</span>
+                            <span><i class="fa-solid fa-clock"></i> 7 min</span>
+                        </div>
+                        <h3>10 Errores SEO que Están Hundiendo tu Web</h3>
+                        <p>Estos son los errores más comunes que impiden que tu web posicione en Google. Aprende a
+                            identificarlos y solucionarlos de inmediato.</p>
+                        <div>
+                            <span class="blog-tag">SEO Técnico</span>
+                            <span class="blog-tag">Errores Comunes</span>
+                        </div>
+                        <br><br>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar"></i> 10 Nov 2024</span>
+                            <span><i class="fa-solid fa-clock"></i> 6 min</span>
+                        </div>
+                        <h3>Cómo Crear Contenido SEO que Convierta</h3>
+                        <p>No basta con posicionar, tu contenido debe convertir visitantes en clientes. Aprende las
+                            claves para crear contenido que vende.</p>
+                        <div>
+                            <span class="blog-tag">Content Marketing</span>
+                            <span class="blog-tag">Conversión</span>
+                        </div>
+                        <br><br>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar"></i> 5 Nov 2024</span>
+                            <span><i class="fa-solid fa-clock"></i> 8 min</span>
+                        </div>
+                        <h3>Link Building en 2024: Estrategias que Funcionan</h3>
+                        <p>El link building sigue siendo crucial para el SEO. Descubre las estrategias White Hat que
+                            realmente funcionan en 2024.</p>
+                        <div>
+                            <span class="blog-tag">Link Building</span>
+                            <span class="blog-tag">White Hat</span>
+                        </div>
+                        <br><br>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar"></i> 1 Nov 2024</span>
+                            <span><i class="fa-solid fa-clock"></i> 5 min</span>
+                        </div>
+                        <h3>Core Web Vitals: Guía Definitiva 2024</h3>
+                        <p>Google premia las webs rápidas. Aprende a optimizar los Core Web Vitals y mejora tu
+                            posicionamiento significativamente.</p>
+                        <div>
+                            <span class="blog-tag">SEO Técnico</span>
+                            <span class="blog-tag">Performance</span>
+                        </div>
+                        <br><br>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fa-solid fa-search"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar"></i> 28 Oct 2024</span>
+                            <span><i class="fa-solid fa-clock"></i> 10 min</span>
+                        </div>
+                        <h3>Keyword Research: Encuentra las Palabras que Venden</h3>
+                        <p>El keyword research es la base del SEO. Aprende a encontrar las palabras clave que realmente
+                            traen clientes a tu negocio.</p>
+                        <div>
+                            <span class="blog-tag">Keywords</span>
+                            <span class="blog-tag">Estrategia</span>
+                        </div>
+                        <br><br>
+                        <a href="#" class="read-more">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+        style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); padding: 60px 0; text-align: center; color: white;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">¿Listo para posicionar tu web?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">Solicita tu auditoría SEO gratuita y
+                descubre cómo podemos ayudarte</p>
+            <a href="index.html#contacto" class="btn-primary" style="background: white; color: var(--primary);">
+                <i class="fa-solid fa-gift"></i> Auditoría SEO Gratis
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>SEO<strong>ParaElBaix</strong></span>
+                    </div>
+                    <p>Tu partner de confianza en posicionamiento web. Resultados medibles, transparencia total.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="index.html#servicios">SEO Local</a></li>
+                        <li><a href="index.html#servicios">SEO Nacional</a></li>
+                        <li><a href="index.html#servicios">SEO Técnico</a></li>
+                        <li><a href="index.html#servicios">Link Building</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="index.html#casos">Casos de Éxito</a></li>
+                        <li><a href="index.html#precios">Precios</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="blog.html">Blog SEO</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +34 640 32 98 80</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@seoparaelbaix.es</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 SEOParaElBaix. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="terminos.html">Términos y Condiciones</a>
+                    <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
