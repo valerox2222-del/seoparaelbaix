@@ -425,7 +425,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.service-card>p {
+.service-card p {
     color: var(--gray);
     margin-bottom: 1.5rem;
 }
@@ -636,9 +636,10 @@ body {
 }
 
 .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
 
 .pricing-card {
@@ -648,6 +649,10 @@ body {
     border: 2px solid var(--gray-light);
     transition: all 0.3s;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
 }
 
 .pricing-card:hover {
@@ -682,11 +687,13 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     color: var(--dark);
+    margin-left: 0.25rem;
 }
 
 .period {
     font-size: 1.2rem;
     color: var(--gray);
+    margin-left: 0.5rem;
 }
 
 .plan-description {
@@ -813,7 +820,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.contact-info>p {
+.contact-info p {
     font-size: 1.1rem;
     color: var(--gray);
     margin-bottom: 1.5rem;
